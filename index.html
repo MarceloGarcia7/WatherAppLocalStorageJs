@@ -13,16 +13,24 @@
 </head>
 
 <body>
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <label id="nameLabel" style="color: aliceblue">Name: <input id="nameCi" style="color: black" type="text" name="nameCity"></label>
+      <button id="myBtn">Submit</button>
+      <p id="mnsjModal" style="color :white">Please enter your City</p>
+    </div>
+  </div>
 
   <div class="contenedor" id="app">
     <div class="mainCity">
-      <h3>{{forecast.city.name}}</h3>
-      <h4>{{forecast.list[0].newDate2}}</h4>
+      <h4>{{forecast.city.name}},{{forecast.city.country}}</h4>
+      <h4>{{forecast.list[0].newDate}}</h4>
     </div>
     <div id="contenedorForecast" class="contenedorForecast">
       <div class="titulo">
         <div class="titulo2">
-          <!--<h4>{{forecast.list[0].newDate}}</h4>-->
           <h3>{{forecast.list[0].main.temp.toFixed(0)}}º</h3>
           <h6>Humedad {{forecast.list[0].main.humidity}}%</h6>
           <h6>{{forecast.list[0].weather[0].description}}</h6>
@@ -83,7 +91,6 @@
       messagingSenderId: "707992955794"
     };
     firebase.initializeApp(config);
-
   </script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="weatherJscript.js"></script>

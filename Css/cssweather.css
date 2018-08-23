@@ -6,6 +6,41 @@
   border: 0;
 }
 
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: red;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+  background: linear-gradient(rgba(46, 40, 9, 0.87), rgba(100, 59, 7, 0.97));
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(181, 185, 154, 0.79);
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+
 /* The Close Button */
 
 .close {
@@ -14,13 +49,13 @@
   font-size: 30px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
 
 input {
   height: 23px;
@@ -51,6 +86,12 @@ button {
 
 
 body {
+  /*background-image: url(/images/giphy.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 40px;*/
   background-color: #2e4a62;
 }
 
@@ -70,7 +111,7 @@ body {
   }
   .contenedorForecast {
     margin-bottom: 40px;
-    margin-top: 36px;
+    margin-top: 22px;
   }
 
   p {
@@ -78,6 +119,7 @@ body {
   }
 
   .mainCity {
+    height: 7%;
     overflow: hidden;
     position: fixed;
     /*Set the navbar to fixed position */
@@ -94,9 +136,12 @@ body {
 
     border-bottom: 1px solid rgba(240, 248, 255, 0.44);
     background-color: #062F4F;
+    /*background: linear-gradient(rgba(8, 32, 109, 0.67), rgba(47, 97, 136, 0.82));*/
     height: 240px;
     display: flex;
     flex-direction: row;
+    /* border-radius: 25px 25px 0px 0px;
+    background-color: rgba(195, 168, 24, 0.7);*/
   }
 
   .titulo2 {
@@ -141,12 +186,16 @@ body {
   }
 
   .temp {
+    /*background: linear-gradient(rgba(8, 32, 109, 0.67), rgba(47, 97, 136, 0.82));
+    border-bottom: 1px solid rgba(195, 168, 24, 0.57);*/
     display: inline-block;
     width: 16%;
   }
 
   .detail {
     color: aliceblue;
+    /* background: linear-gradient(rgba(8, 32, 109, 0.67), rgba(47, 97, 136, 0.82));
+    /* background-color: rgba(154, 201, 185, 0.78);*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -165,6 +214,8 @@ body {
     border: 3px solid linear-gradient(rgba(8, 32, 109, 0.67), rgba(47, 97, 136, 0.82));
     background: linear-gradient(rgba(26, 74, 111, 0.65), rgba(47, 97, 136, 0.82));
     border-bottom: 1px solid rgba(240, 248, 255, 0.44);
+    /* border-bottom: 1px solid rgba(195, 168, 24, 0.57);
+     background-color: rgba(154, 201, 185, 0.78);*/
     display: flex;
     align-items: center;
     flex: 2;
@@ -189,12 +240,17 @@ body {
 
   .mainContenCity {
     display: none;
-    margin-top: 64px;
+    /*display: flex;*/
+    margin-top: 42px;
     margin-bottom: 35px;
     flex-direction: column;
   }
   .contenCity {
+    /*margin-bottom: 80px;
+    width: 100%;*/
     display: flex;
+    /*justify-content: space-evenly;
+    flex-flow: wrap;*/
   }
   .contenCity > div {
 
@@ -203,7 +259,7 @@ body {
     align-items: center;
     border-radius: 3px;
     margin: 0.5px;
-    height: 90px;
+    height: 75px;
     border: 0.3px solid #262216;
   }
   .contenCity h5 {
@@ -241,7 +297,7 @@ body {
     font-size: 17px;
     font-weight: bold;
     border-radius: 20px 0px 0px 20px;
-   
+    /*box-shadow: 20px 5px 13px #888888;*/
   }
   .myBtn {
     margin: 0px;
@@ -305,12 +361,28 @@ body {
   .titulo {
 
     border-bottom: 1px solid rgba(240, 248, 255, 0.44);
-    background-color: #062F4F;   
+    background-color: #062F4F;
+    /*background: linear-gradient(rgba(8, 32, 109, 0.67), rgba(47, 97, 136, 0.82));*/
     height: 240px;
     display: flex;
     flex-direction: row;
+    /* border-radius: 25px 25px 0px 0px;
+    background-color: rgba(195, 168, 24, 0.7);*/
   }
 
+  /* .titulo h3 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 25px;
+    margin: 3px;
+  }
+
+  .titulo p {
+    color: aliceblue;
+    margin: 1px;
+    font-size: 18px;
+    text-align: center
+  }*/
   .titulo2 {
     color: aliceblue;
     width: 50%;
